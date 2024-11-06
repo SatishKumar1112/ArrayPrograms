@@ -7,7 +7,23 @@
 </head>
 <body>
     <h4>Sample javascript program</h4>
-    <input type="number" placeholder="enter the age">
-    <button onclick="ageSearch">Submit</button>    
+    <input type="number" id="ageid" placeholder="enter the age">
+    <button onclick="ageSearch()">Submit</button>  
+    <p id="messagecontent"></p>  
 </body>
+<script>
+    function ageSearch(){
+
+        const agevalue = document.getElementById("ageid").value;
+        if(agevalue >= 18)
+        {
+            document.getElementById("messagecontent").innerText="above 18";
+            document.getElementById("ageid").value="";
+        }
+        else{
+            document.getElementById("messagecontent").innerText="below 18";
+            document.getElementById("ageid").value="";
+        }
+    }
+</script>
 </html>
